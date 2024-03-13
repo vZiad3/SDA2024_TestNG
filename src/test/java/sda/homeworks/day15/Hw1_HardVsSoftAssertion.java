@@ -43,17 +43,16 @@ Verify button Log out is displayed on the new page.
         driver.findElement(By.id("submit")).click();
 
         //Verify new page URL contains practicetestautomation.com/logged-in-successfully/
-        String newUrl = driver.getCurrentUrl();
-        System.out.println("newUrl = " + newUrl);
+        Assert.assertTrue(driver.getCurrentUrl().contains("practicetestautomation.com/logged-in-successfully/"));
+
         // WebElement icon = driver.findElement(By.xpath("//img[@class='custom-logo']"));
-        boolean isUrl = newUrl.contains("https://practicetestautomation.com/logged-in-successfully/");
-        Assert.assertTrue(isUrl);
+        Assert.assertTrue(driver.findElements(By.xpath("//*[contains(text(),'Congratulations')]")).size()>0);
 
         //Verify new page contains expected text ('Congratulations' or 'successfully logged in')
-        WebElement verifyMess = driver.findElement(By.xpath("//h1[.='Logged In Successfully']"));
-        String actualMess = verifyMess.getText();
-        boolean isMess = actualMess.contains("Logged In Successfully");
-        Assert.assertEquals(isMess,actualMess);
+
+        Assert.assertTrue(driver.findElements(By.xpath("//*[contains(text(),'successfully logged in')]")).size()>0);
+
+
         //Verify button Log out is displayed on the new page.
         WebElement logOutButton = driver.findElement(By.xpath("//div[.='Log out']"));
         Assert.assertTrue(logOutButton.isDisplayed());
@@ -80,12 +79,12 @@ Verify button Log out is displayed on the new page.
         String newUrl = driver.getCurrentUrl();
         System.out.println("newUrl = " + newUrl);
         // WebElement icon = driver.findElement(By.xpath("//img[@class='custom-logo']"));
-        boolean isUrl = newUrl.contains("https://practicetestautomation.com/logged-in-successfully/");
-        sa.assertTrue(isUrl);
+        sa.assertTrue(driver.findElements(By.xpath("//*[contains(text(),'Congratulations')]")).size()>0);
+
 
         //Verify new page contains expected text ('Congratulations' or 'successfully logged in')
-        WebElement verifyMess = driver.findElement(By.xpath("//h1[.='Logged In Successfully']"));
-        sa.assertTrue(verifyMess.equals("Logged In Successfully"));
+        sa.assertTrue(driver.findElements(By.xpath("//*[contains(text(),'successfully logged in')]")).size()>0);
+
         //Verify button Log out is displayed on the new page.
         WebElement logOutButton = driver.findElement(By.xpath("//div[.='Log out']"));
         sa.assertTrue(logOutButton.isDisplayed());
