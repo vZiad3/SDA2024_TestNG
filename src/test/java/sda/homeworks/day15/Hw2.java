@@ -2,6 +2,7 @@ package sda.homeworks.day15;
 
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import sda.tests.utilities.TestBase;
@@ -30,16 +31,23 @@ public class Hw2 extends TestBase {
 
         // Type password Password123 into Password field.
 
-        driver.findElement(By.xpath("//input[@id='password']")).sendKeys("Passwwwword12333");
+        driver.findElement(By.xpath("//input[@id='password']")).sendKeys("Password123");
+        //Click button
         driver.findElement(By.xpath("//*[@id='submit']")).click();
 
 
 
         SoftAssert sa = new SoftAssert();
+        //Asertions , message is apears & message equals to the one printed on the page
 
-        sa.assertTrue(driver.getPageSource().contains("//*[@class='show']"));
+        // Verify error message is displayed.
+        WebElement errorMes = driver.findElement(By.id("error"));
+        String errorMessage = errorMes.getText();
+        sa.assertTrue(errorMes.isDisplayed());
 
-        sa.assertTrue(driver.getPageSource().contains("Your username is invalid!"));
+      //         Verify error message text is Your username is invalid!
+        sa.assertTrue(errorMessage.equals("Your username is invalid!"));
+
 
         sa.assertAll();
 
