@@ -11,10 +11,14 @@ public class C03DependsOnMethods {
 
 
     @Test
-    public void loginTest(){System.out.println("login tested successfully");}
+    public void loginTest(){
+        System.out.println("login tested successfully");
+    }
 
     @Test(dependsOnMethods = {"loginTest"})
-    public void homepageTest(){System.out.println("homepage tested successfully");}
+    public void homepageTest(){
+        System.out.println("homepage tested successfully");
+    }
 
     @Test(dependsOnMethods = {"loginTest","homepageTest"})
     public void addToChartTest(){

@@ -32,7 +32,7 @@ public class C08AssertionInfo {
 
 
         System.out.println("Testing equality of 3=3");
-        sa.assertEquals(3,5);
+        sa.assertEquals(3,3);
 
         //failed, but it doesn't underline..
         sa.assertAll();

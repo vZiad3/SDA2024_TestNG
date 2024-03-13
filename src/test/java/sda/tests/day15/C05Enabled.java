@@ -33,7 +33,7 @@ public class C05Enabled {
     @Test(priority = 3000)
     void b(){
         System.out.println("b");
-    }
+    }           // b will be executed after C because the priority , so alphabatic dosent matter when C have first priority
 
     @Test(priority = 2001,enabled = false)
     void a(){
@@ -53,3 +53,8 @@ test5
 b
  */
 }
+
+
+// why not b then c
+
+//c first           // alphatbatic
