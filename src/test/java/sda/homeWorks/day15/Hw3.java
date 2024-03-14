@@ -1,4 +1,4 @@
-package sda.homeworks.day15;
+package sda.homeWorks.day15;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
