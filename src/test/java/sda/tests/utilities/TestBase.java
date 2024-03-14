@@ -19,12 +19,12 @@ public class TestBase {
         driver.manage().window().maximize();
     }
 
-    @AfterMethod
-    public void afterMethod(){
+   // @AfterMethod
+   // public void afterMethod(){
    //   if(driver != null){
    //       driver.quit();
    //       driver = null;
    //   }
-    }
+   // }
 
 }

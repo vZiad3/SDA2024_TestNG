@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Tests">
+    <test name="postiveTest">
+        <parameter name="username" value="student"></parameter>
+        <parameter name="password" value="Password123"></parameter>
+        
+        <classes>
+            <class name="sda.homeWorks.day16.hw3">
+                <methods>
+                    <include name="postiveTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="negativeTestUserName">
+        <parameter name="username" value="Sttstsysu"></parameter>
+        <parameter name="password" value="Password123"></parameter>
+        <classes>
+            <class name="sda.homeWorks.day16.hw3">
+                <methods>
+                    <include name="negativeTestUserName"></include>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+    <test name="negativeTestPassword">
+        <parameter name="username" value="student"></parameter>
+        <parameter name="password" value="Pajdsdisjdisdis"></parameter>
+        <classes>
+            <class name="sda.homeWorks.day16.hw3">
+                <methods>
+                    <include name="negativeTestPassword"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
+
+
+
+
+
