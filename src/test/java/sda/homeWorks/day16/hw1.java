@@ -24,8 +24,7 @@ public class hw1 extends TestBase {
         //Button click
         driver.findElement(By.xpath("//input[@name='btnK'][@role='button']")).click();
         //Assert get text result est that the result text contains the searched Word.
-        WebElement result = driver.findElement(By.id("result-stats"));
-        System.out.println("result.getText() = " + result.getText());
+        WebElement result = driver.findElement(By.xpath("//h3[@class='LC20lb MBeuO DKV0Md'][.='Java | Oracle']"));
 
         Assert.assertTrue(result.isDisplayed());
         //Run tests from XML file.

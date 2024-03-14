@@ -4,14 +4,22 @@
     <test name="Test 1">
         <parameter name="Language" value="Java"></parameter>
         <classes>
-            <class name="sda.homeWorks.day16.hw1"></class>
+            <class name="sda.homeWorks.day16.hw1">
+                <methods>
+                    <include name="hw1"></include>
+                </methods>
+            </class>
         </classes>
     </test>
 
     <test name="Test2">
         <parameter name="AutomationFrameWork" value="Selenium"></parameter>
         <classes>
-            <class name="sda.homeWorks.day16.hw1"></class>
+            <class name="sda.homeWorks.day16.hw1">
+                <methods>
+                    <include name="hw2"></include>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>
