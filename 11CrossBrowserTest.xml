@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Tests">
+    <test name="Chrome browser ">
+        <parameter name="browser" value="Chrome"></parameter>
+        <classes>
+            <class name="sda.tests.day17.C05CrossBrowserTesting">
+                <methods>
+                    <include name="test1"></include>                <!-- those incuded test will be executed using Chrome browser -->
+                    <include name="test2"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="FireFox browser  Test">
+        <parameter name="browser" value="firefox"></parameter>          <!-- we used .toLowerCase()  to prevent spelling mistakes -->
+        <classes>
+            <class name="sda.tests.day17.C05CrossBrowserTesting">
+                <methods>
+                    <include name="test3"></include>
+                    <include name="test4"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
