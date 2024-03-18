@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Negative Login Tests">
+<test name="Smoke Tests">
+    <parameter name="username" value="student"/>
+    <parameter name="password" value="DKDNKDNKD"/>
+    <packages>
+        <package name="sda.tests.smokeTest"/>
+    </packages>
+</test>
+</suite>
+
