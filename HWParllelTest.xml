@@ -1,11 +1,26 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Negative Login Tests">
-<test name="Smoke Tests">
-    <parameter name="username" value="student"/>
-    <parameter name="password" value="DKDNKDNKD"/>
+<test name="Smoke Tests" parallel="methods" thread-count="2">
     <packages>
-        <package name="sda.tests.smokeTest"/>
+        <package name="sda.tests.smokeTest"></package>
     </packages>
+<classes>
+    <class name="sda.tests.smokeTest.NegativeLoginTest"></class>
+  <parameter name="username" value="student"/>
+    <parameter name="password" value="DKDNKDNKD"/>
+</classes>
 </test>
+    <test name="positiveTest">
+        <packages>
+            <package name="sda.tests.smokeTest"></package>
+        </packages>
+        <classes>
+            <class name="sda.tests.smokeTest.positiveLoginTest"></class>
+            <parameter name="username" value="student"/>
+            <parameter name="password" value="Password123"/>
+        </classes>
+    </test>
 </suite>
 
+<!--<parameter name="username" value="student"/>-->
+<!--<parameter name="password" value="DKDNKDNKD"/>-->
