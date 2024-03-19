@@ -1,4 +1,4 @@
-package sda.tests.smokeTest;
+package sda.tests.day19;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -6,9 +6,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import sda.tests.utilities.TestBase;
+
 import java.time.Duration;
 
-public class NegativeLoginTest extends TestBase {
+public class C03AllureTest01 extends TestBase {
 
         /*
         Test Case2: Negative Username Test
@@ -37,7 +38,7 @@ public class NegativeLoginTest extends TestBase {
         SoftAssert sa = new SoftAssert();
 
         //Verify error message is displayed.
-        sa.assertTrue(!message.isDisplayed());
+        sa.assertTrue(message.isDisplayed());
 
         //Verify error message text is Your username is invalid!
         sa.assertEquals(message.getText(), "Your username is invalid!");
